@@ -1,0 +1,57 @@
+from tkinter import *
+import tkinter.font as font
+import tkinter as tk
+class App
+ def__init__(self):
+              self.root=Tk
+              self.root.geometry("380x400")
+              self.root.resizable(0,0)
+              self.result = srtivar()
+              self.font = font.Font(size = 15)
+              self.screen = Entry(self.root,text =self.result, width= 30,
+                                  justify = 'right', font = (10), bd = 4)
+self.setScreen()
+self.keypad = [['cal', u"￦u221A", "/", "<-"],
+                 ["7", "8", "9", "*"],
+                 ["4", "5", "6", "-"],
+                 ["1", "2", "3", "+"],
+                 ["!", 0, ".", "="]]
+self.button = {}
+self.resultvalue =
+self.setGraphic()
+def show(self):
+    self.root.mainloop()
+def setScreen(self):
+   self.screen.grid(row = 0, columnspan = 4, padx = 15,
+                    pady = 15, ipady = 15)
+def cal(self,event):
+    btn = event.widget.cget("text")
+    try
+      if btn == u"￦u221A":
+         ret = float(int.get()) ** (0.5)
+         self.resultValue = str(ans)
+         self.result.set(str(ans))
+         elif btn == "c":
+            self.result.set("")
+          elif btn == "!":
+            def fact(n): return n if n < 2 else n * fact(n-1)
+            self.result.set(str(fact(int(self.result.get()))))
+
+            elif btn == "<-"
+              self.resultvalue = str(eval(self.result.get()))
+              self.result.set(self.resultvalue)
+
+            else:
+              self.result.set(self.result.get() + str(btn))
+          except
+            self.result.set("계산할 수 없는 형식입니다")
+        def setGraphic(self):
+         for _ in range(len(self.keypad)):
+          for _2 in range(len(self.keypad[_])):
+          self.button["btn_"+str(self.keypad[_],[_2])] = Button(self.root, bd
+          =1, text = str(self.keypad[_], [_2]), font = self.font)
+self.button["btn_" + str(self,keypad[_], [_2])].grid( row = _+1, column = _2, padx =5 pady = 5, ipadx = 5, ipady = 5)
+  self.button["btn_" + str(self.keypad[_] [_2])].bind("<button-1>"), self.cal)
+  if__name__==  "__main__":
+     app = APP()
+     app. show()              
